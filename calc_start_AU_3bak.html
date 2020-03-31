@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+	<title>Calculator</title>
+  	
+</head>
+    <div class="container">
+        <div class="Jumbotron">
+            <h1 class="display-3">NREL HPC AU Calculator</h1>
+            <h2 class="lead">This is an application to assist with determining AU Usage requests for the Eagle environment.</h2>
+            <hr class="my-4">
+        </div>
+        <form name="form1" onsubmit="false">		
+		<table width="75%" border="0">
+			<tr>
+			  <th align="left">Number of Jobs</th>
+			  <th align="left">Number of Nodes</th>
+			  <th align="left">Node Hours</th>
+			  <th align="left">Total Number of Allocation Units (AU)</th>
+			</tr>
+			<div>
+			  <td><input id="Jobs" type="number" oninput="calculate();" /></td>
+			  <td><input id="Nodes" type="number" oninput="calculate();" /></td>
+			  <td><input id="Hours" type="number" oninput="calculate();"/></td>
+			  <td><input id="result" /></td>
+			  <!-- <p>
+				<td><input id="Cores" </td>
+			  </p> -->
+			</div>
+			<tr>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			
+			</tr>
+		  </table>
+		  </form>
+		<script>
+			function calculate() {
+				var Jobs = document.getElementById('Jobs').value; 
+				var Nodes = document.getElementById('Nodes').value;
+				var Hours = (document.getElementById('Hours').value);
+				// var Cores = document.getElementById('Cores').value;
+				var result = document.getElementById('result'); 
+				var myResult = Jobs * Nodes * ((Hours)*3);
+				// var myResult = Jobs * Cores * Hours;
+				  document.getElementById('result').value = myResult;
+			}
+		</script>
+		<!DOCTYPE html>
+		<html>
+		<body>
+		
+		<button onclick="myFunction()">Clear Console</button>
+		<script>
+		console.log("Clear the console.");
+		function myFunction() {
+			console.clear();
+		}
+		</script>
+		
+		</body>
+		</html>
+		
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Input element Alternative</h1>
+
+<form action="/action_page.php">
+    <label for="Jobs">Number of Jobs:</label>
+    <input type="number" id="Jobs" name="Jobs"><br><br>
+    <label for="Nodes">Number of Nodes:</label>
+    <input type="number" id="Nodes" name="Hours"><br><br>
+    <label for="Cores">Number of Cores:</label>
+    <input type="number" id="Cores" name="Cores"><br><br>
+    <label for="Hours">Number of Hours:</label>
+    <input type="number" id="Hours" name="Hours"><br><br>
+    <!-- <input type="submit" value="Submit"> --> 
+    <label for="result">AU Estimate:</label>
+    <input id="result"><br><br>
+</form>
+<script>
+    function calculate() {
+        var Jobs = document.getElementById('Jobs').value; 
+        var Nodes = document.getElementById('Nodes').value;
+        var Cores = document.getElementById('Cores').value;
+        var myResult = [Cores = (Nodes * 36)]
+        var Hours = (document.getElementById('Hours').value);
+        var result = document.getElementById('result'); 
+        var myResult = Jobs * Nodes * ((Hours)*3);
+          document.getElementById('result').value = myResult;
+    }
+</script>
+
+</body>
+</html> 
+
+<p>
+	<A HREF="https://www.nrel.gov/hpc/resource-allocation-requests.html">NREL Resource Allocation Requests</A> </A> 
+</p>
+<p>    
+	<A HREF="mailto:hpc-help@nrel.gov">hpc-help@nrel.gov </A>
+
+</p>
